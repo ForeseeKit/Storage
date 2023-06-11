@@ -10,7 +10,7 @@ implementation 'com.graceens.foresee:storage:1.0.1'
 
 ## Usage
 
-### Read or Write for cache
+### Read or write for cache
 
 ```kotlin
 "test.txt".also { filename ->
@@ -22,7 +22,7 @@ implementation 'com.graceens.foresee:storage:1.0.1'
 }
 ```
 
-### Read or Write for media store
+### Read or write for media store
 
 #### For Downloads
 
