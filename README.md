@@ -3,6 +3,7 @@
 Simplify reading and writing files to external storage
 
 ## Supported features
+
 - Read and write for external store
 - Read and write for media store
 
@@ -27,6 +28,9 @@ implementation 'com.graceens.foresee:storage:1.0.1'
 ```
 
 ### Read or write for media store
+
+Additional permissions may be required,
+see <https://developer.android.com/training/data-storage/shared/media?hl=zh-cn>
 
 #### For Downloads
 
