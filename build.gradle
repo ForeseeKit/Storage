@@ -8,7 +8,7 @@ plugins {
 }
 
 ext {
-    storageVersion = '1.0.1'
+    storageVersion = '1.0.2'
 }
 
 apply from: "${rootDir}/scripts/publish-root.gradle"
