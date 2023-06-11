@@ -1,0 +1,63 @@
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+def website = 'https://github.com/graceens/Storage'
+def git = 'git@github.com:graceens/Storage.git'
+def libName = 'storage'
+def libDescription = 'android data persistence storage library'
+def libVersion = rootProject.ext.storageVersion
+def libGroupId = 'com.graceens.foresee'
+//def libLabels = ['android', 'kotlin', 'storage']
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = libGroupId
+            artifactId = libName
+            version = libVersion
+            from components.release
+
+            pom {
+                name = libName
+                description = libDescription
+
+                licenses {
+                    license {
+                        name = "The Apache Software License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'grace'
+                        name = 'grace'
+                        email = '[graceenszhang@gmail.com]'
+                    }
+                }
+
+                scm {
+                    connection = git
+                    developerConnection = git
+                    url = website
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username = properties.getProperty('ossrh.user')
+                password = properties.getProperty('ossrh.pass')
+            }
+
+            url = "https://maven.pkg.jetbrains.space/mycompany/p/projectkey/my-maven-repo"
+        }
+    }
+}
+signing {
+    sign publishing.publications.release
+}

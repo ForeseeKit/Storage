@@ -1,4 +1,4 @@
-package com.grace.foresee.storage
+package com.grace.foresee.storage.app
 
 import org.junit.Test
 
