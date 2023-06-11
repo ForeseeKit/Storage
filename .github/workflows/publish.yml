@@ -15,7 +15,7 @@ jobs:
           distribution: adopt
           java-version: 11
       - name: Release build
-        run: ./gradlew :stream-chat-android-client:assembleRelease
+        run: ./gradlew :storage:assembleRelease
       - name: Source jar and dokka
         run: ./gradlew androidSourcesJar javadocJar
       - name: Publish to MavenCentral
