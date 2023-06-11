@@ -10,7 +10,7 @@ Simplify Android reading and writing files to external storage
 ## Installation
 
 ```
-implementation 'com.graceens.foresee:storage:1.0.1'
+implementation 'com.graceens.foresee:storage:1.0.2'
 ```
 
 ## Usage
