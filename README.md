@@ -2,6 +2,10 @@
 
 Simplify reading and writing files to external storage
 
+## Supported features
+- Read and write for external store
+- Read and write for media store
+
 ## Installation
 
 ```
